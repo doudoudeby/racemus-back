@@ -25,12 +25,13 @@ module.exports = {
             .on('error', error => console.error(error))
             .on('data',
                     (row) => {
-                console.log(row)
                         tab.push(row);
             })
             .on('end', () => {
                 console.log('CSV file successfully processed');
+
                          return res.status(201).json({
+
                               "response" : tab
                           })
 
